@@ -1,0 +1,17 @@
+syntax = "proto3";
+package dexdemo.dexdemo;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "dexdemo/dexdemo/params.proto";
+
+option go_package = "dexdemo/x/dexdemo/types";
+
+// GenesisState defines the dexdemo module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package dexdemo.dexdemo;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "dexdemo/x/dexdemo/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "dexdemo/x/dexdemo/Params";
+  option (gogoproto.equal) = true;
+
+  
+}
